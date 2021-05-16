@@ -1,0 +1,100 @@
+/****************************************/
+// LAYOUT
+/****************************************/
+
+// Structure graphique du site
+
+
+
+
+// HEADER
+
+body {
+	> header {
+		h1 {
+			text-align: center;
+	    	+ p {
+				text-align: center;
+				.px-to-rem(margin, 10 0 5);
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+// PAGE - général
+
+body {
+	color: @Cg4;
+	.px-to-rem(font-size, 16);
+	font-family: 'Open Sans', sans-serif;
+	background: @Cg1;
+	.px-to-rem(padding, 20);
+	max-width: 1080px;
+	margin: 0 auto;
+	@media @small {
+		.px-to-rem(padding, 15);
+	}
+	section {
+		.box {
+			background: @Cwh;
+			.px-to-rem(padding, 20);
+			-webkit-box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.1);
+			-moz-box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.1);
+			box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.1);
+			-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
+			border-radius: 5px;
+			.px-to-rem(margin-bottom, 20);
+			@media @small {
+				.px-to-rem(padding, 15);
+				.px-to-rem(margin-bottom, 15);
+			}
+			p {
+				.px-to-rem(margin-bottom, 10);
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+			h2 {
+				text-transform: uppercase;
+				font-weight: @semibold;
+			}
+			.box-actions {
+				border-top: 1px solid @Cg2;
+				.px-to-rem(padding-top, 20);
+				.px-to-rem(margin-top, 10);
+			}
+		}
+		.flex {
+			> div {
+				.px-to-rem(padding, 20);
+				@media @small {
+					.px-to-rem(padding, 10 0);
+				}
+			}
+		}
+		#participants {
+			li {
+				position: relative;
+				img {
+					position: absolute;
+				    top: 50%;
+				    -webkit-transform: translate(0, -50%);
+				    transform: translate(0, -50%);
+				    .px-to-rem(padding-left, 5);
+				}
+			}
+		}		
+	}
+}
